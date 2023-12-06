@@ -10,25 +10,35 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "body": {
       "type": "component",
       "repeatable": true,
-      "component": "section.section"
+      "component": "section.section",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "chapter": {
-      "type": "enumeration",
-      "enum": [
-        "about",
-        "citizens",
-        "pensioners",
-        "payers",
-        "payment",
-        "budget",
-        "contacts"
-      ],
-      "required": true
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chapter.chapter",
+      "inversedBy": "navigation"
     }
   }
 }

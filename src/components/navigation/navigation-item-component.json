@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_navigation_item_components",
+  "info": {
+    "displayName": "NavigationItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    }
+  }
+}

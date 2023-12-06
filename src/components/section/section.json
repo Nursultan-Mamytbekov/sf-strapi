@@ -7,13 +7,14 @@
   },
   "options": {},
   "attributes": {
-    "content": {
-      "type": "component",
-      "repeatable": true,
-      "component": "content.content"
-    },
     "title": {
       "type": "string"
+    },
+    "items": {
+      "displayName": "NavigationItemComponent",
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.navigation-item-component"
     }
   }
 }
