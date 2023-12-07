@@ -14,7 +14,8 @@
       "displayName": "NavigationItemComponent",
       "type": "component",
       "repeatable": true,
-      "component": "navigation.navigation-item-component"
+      "component": "navigation.navigation-item-component",
+      "required": true
     }
   }
 }

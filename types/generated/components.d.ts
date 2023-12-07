@@ -45,7 +45,8 @@ export interface SectionSection extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    items: Attribute.Component<'navigation.navigation-item-component', true>;
+    items: Attribute.Component<'navigation.navigation-item-component', true> &
+      Attribute.Required;
   };
 }
 

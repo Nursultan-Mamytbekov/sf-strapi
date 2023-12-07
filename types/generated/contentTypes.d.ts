@@ -975,7 +975,7 @@ export interface ApiReportReport extends Schema.SingleType {
     background: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     content: Attribute.Component<'content.content'> &
