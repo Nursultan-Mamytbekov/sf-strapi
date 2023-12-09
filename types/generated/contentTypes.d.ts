@@ -1068,13 +1068,29 @@ export interface ApiSliderSlider extends Schema.CollectionType {
     singularName: 'slider';
     pluralName: 'sliders';
     displayName: 'Slider';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    background: Attribute.Media;
-    title: Attribute.String;
+    background: Attribute.Media &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    content: Attribute.Component<'content.content'> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1090,6 +1106,12 @@ export interface ApiSliderSlider extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::slider.slider',
+      'oneToMany',
+      'api::slider.slider'
+    >;
+    locale: Attribute.String;
   };
 }
 
