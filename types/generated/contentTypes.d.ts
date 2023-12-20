@@ -864,6 +864,7 @@ export interface ApiPartnerPartner extends Schema.CollectionType {
     singularName: 'partner';
     pluralName: 'partners';
     displayName: 'Partner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
